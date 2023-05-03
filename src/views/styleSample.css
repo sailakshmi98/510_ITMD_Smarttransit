@@ -1,0 +1,64 @@
+/* General background images */
+.background {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-attachment: fixed;
+}
+.bk {
+    -fx-background-image: url("../img/photo.gif");
+}
+/* ... (other background image classes) */
+
+/* Button styles */
+.button-base {
+    -fx-background-color: #1e88e5;
+    /* ... (other button-base properties) */
+}
+.button-base:hover {
+    -fx-background-color: #1565c0;
+    /* ... (other button-base:hover properties) */
+}
+.button-base:pressed {
+    -fx-background-color: #0d47a1;
+    /* ... (other button-base:pressed properties) */
+}
+.button-base Text {
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.9), 1, 0.0, 0, 1);
+}
+
+/* Box effect */
+.box {
+    -fx-effect: dropshadow(one-pass-box, deepskyblue, 20, 1.0, 0, 1);
+}
+
+/* Typography */
+.text {
+    -fx-font-family: "Roboto";
+    /* ... (other text properties) */
+}
+.text-title {
+    -fx-font-family: "Roboto";
+    /* ... (other text-title properties) */
+}
+.root {
+    -fx-font-family: "Lato";
+}
+
+/* Custom component styles */
+.bk {
+    -fx-background-color: #4a4e69;
+}
+.button {
+    -fx-background-color: #9a8c98;
+    /* ... (other button properties) */
+}
+.button:hover {
+    -fx-background-color: #c9ada7;
+}
+.label {
+    -fx-text-fill: #e0e1dd;
+    -fx-font-size: 16px;
+}
+.table-view {
+    -fx-base: #9a8;
+}

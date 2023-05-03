@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #f3f3f3; -fx-border-color: #0598ff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BusController">
+    <children>
+        <GridPane hgap="10" layoutX="10.0" layoutY="10.0" vgap="10">
+            <children>
+                <VBox alignment="CENTER" prefHeight="450.0" prefWidth="233.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <children>
+                        <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Search Buses">
+                        </Label>
+                        <Label style="-fx-font-size: 14;" text="Find the best bus for your trip">
+                        </Label>
+                        <ComboBox fx:id="from" editable="true" prefWidth="300.0" promptText="From" style="-fx-background-color: linear-gradient(to right, #dde8ff, #c7d7ff); -fx-border-radius: 5; -fx-background-radius: 5;">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </ComboBox>
+                        <ComboBox fx:id="to" editable="true" prefWidth="300.0" promptText="To" style="-fx-background-color: linear-gradient(to right, #dde8ff, #c7d7ff); -fx-border-radius: 5; -fx-background-radius: 5;">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </ComboBox>
+                        <Button fx:id="button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="35.0" prefWidth="150.0" style="-fx-text-fill: black; -fx-background-color: linear-gradient(to right, #4a6fa5, #3e5f91); -fx-border-radius: 5; -fx-background-radius: 5;" text="Search Buses">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                </VBox>
+                
+                <TableView fx:id="table" onMouseClicked="#onRowClicked" prefHeight="450.0" prefWidth="547.0" styleClass="table" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <columns>
+                        <TableColumn fx:id="service1" prefWidth="76.0" text="Service" />
+                        <TableColumn fx:id="source1" prefWidth="75.0" text="Source" />
+						                    <TableColumn fx:id="destination1" prefWidth="78.0" text="Destination" />
+                    <TableColumn fx:id="fare1" prefWidth="48.0" text="Fare" />
+                    <TableColumn fx:id="depart1" prefWidth="73.0" text="Depart" />
+                    <TableColumn fx:id="arrival1" prefWidth="75.0" text="Arrival" />
+                    <TableColumn fx:id="seat1" prefWidth="38.0" text="Seats" />
+                    <TableColumn fx:id="date1" prefWidth="96.0" text="Date" />
+                </columns>
+                <effect>
+                    <DropShadow />
+                </effect>
+            </TableView>
+        </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+    </GridPane>
+      <Button fx:id="logout" layoutX="819.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" text="logout" />
+</children>
+</AnchorPane>

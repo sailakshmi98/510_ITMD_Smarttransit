@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom right, #1a237e, #7986cb);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models.AdminloginModel">
+   <center>
+      <AnchorPane id="background" prefHeight="374.0" prefWidth="560.0" stylesheets="@styleSample.css" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="linear-gradient(to bottom, #ffffff, #e8eaf6)" height="259.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="600" AnchorPane.rightAnchor="116.0" />
+            <TextField fx:id="textField" alignment="CENTER" layoutX="245.0" layoutY="202.0" prefHeight="27.0" prefWidth="320.0" promptText="USERNAME" style="-fx-background-color:white; -fx-border-color: #34eb7a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="245.0" layoutY="251.0" prefHeight="27.0" prefWidth="320.0" promptText="PASSWORD" style="-fx-background-color: white; -fx-border-color: #34eb7a; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #000000;" />
+            <Button fx:id="button" layoutX="334.0" layoutY="310.0" mnemonicParsing="false" onAction="#adminlogin" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: linear-gradient(to bottom right, #673ab7, #9575cd); -fx-background-radius: 2px; -fx-border-color: white; -fx-border-radius: 5px; -fx-border-width: 2px;" stylesheets="@styleSample.css" text="Admin Login">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="BLACK" layoutX="294.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN LOGIN" wrappingWidth="400">
+
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.34210526943206787" blue="0.2793859541416168" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+				<Hyperlink fx:id="back" layoutX="750" onAction="#back" styleClass="white, bold-hyperlink" stylesheets="@styleSample.css" text="Back" />
+            <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="185.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-user-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="54.0" layoutX="185.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-password-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
