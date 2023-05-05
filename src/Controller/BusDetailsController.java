@@ -1389,6 +1389,12 @@ public class BusDetailsController extends Thread  {
 	            String des = dlabel.getText();
 	            String ser = serlabel.getText();
 	            
+	            Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
+	            alert1.setTitle("Confirmation Dialog");
+	            alert1.setHeaderText(null);
+	            alert1.setContentText("Booking confirmed, proceed to checkout.");
+	            alert1.showAndWait();
+	            
 
 	            if (far == null || far.isEmpty() || seatss == null || seatss.isEmpty()) {
 	                Alert alert = new Alert(Alert.AlertType.ERROR);
