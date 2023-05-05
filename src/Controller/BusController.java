@@ -1303,7 +1303,7 @@ public class BusController extends Thread implements Initializable {
           || (list6.get(14) == 1 && btd3)
           || (list6.get(15) == 1 && btd4)) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setContentText("Sorry! The Seat is  already booked");
+        alert.setContentText("Sorry! The Seat is booked");
         alert.showAndWait();
       } else {
 
@@ -1326,14 +1326,6 @@ public class BusController extends Thread implements Initializable {
           String ser = serlabel.getText();
 
           Statement statement = null;
-
-           
-	            Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
-	            alert1.setTitle("Confirmation Dialog");
-	            alert1.setHeaderText(null);
-	            alert1.setContentText("Booking confirmed, proceed to checkout.");
-	            alert1.showAndWait();
-	            
          
             int tot = Integer.parseInt(String.valueOf(far)) * Integer.parseInt(String.valueOf(seatss));
             totalfare.setText(String.valueOf(tot));

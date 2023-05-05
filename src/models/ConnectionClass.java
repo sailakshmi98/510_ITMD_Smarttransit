@@ -8,7 +8,7 @@ public Connection connection;
         String password = "510";
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+        	Class.forName("com.mysql.jdbc.Driver");
         	String DB_URL = "jdbc:mysql://www.papademas.net:3307/510fp?autoReconnect=true&useSSL=false";
         	
         	connection = DriverManager.getConnection(DB_URL,username,password);
